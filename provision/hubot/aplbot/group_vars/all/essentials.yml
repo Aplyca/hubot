@@ -1,0 +1,5 @@
+---
+essentials:
+  timezone: "America/Bogota"
+  packages:
+    - ansible

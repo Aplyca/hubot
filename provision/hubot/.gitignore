@@ -1,0 +1,6 @@
+.DS_Store
+*.box
+.vagrant
+custom*
+.vault
+/roles/*

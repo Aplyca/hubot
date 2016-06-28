@@ -1,0 +1,4 @@
+---
+dependencies:
+  - { role: aplyca.NodeJS, tags: ["aplyca.NodeJS"] }
+  - { role: aplyca.Essentials, tags: ["aplyca.Essentials"] }

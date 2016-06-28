@@ -1,0 +1,23 @@
+---
+- name: Create Directory for repository
+  file: path={{workdir}} state=directory owner=ubuntu group=ubuntu mode=0777
+  become: true
+
+- name: Clone Repository with Bot
+  git: repo=https://github.com/Aplyca/ansible-role-hubot.git dest={{workdir}} refspec=+refs/pull/*:refs/heads/*
+
+- name: Install Coffee Script
+  npm: name=coffee-script global=yes
+  become: true
+
+- name: Install Hubot node packages
+  npm: path={{workdir}}
+  become: true
+
+- name: Add Ansible
+  shell: apt-add-repository ppa:ansible/ansible
+  become: true
+
+- name: Run Hubot Binary
+  shell: cd {{workdir}} && HUBOT_SLACK_TOKEN={{slack_token}} bin/hubot --adapter slack &
+  tags: hubot

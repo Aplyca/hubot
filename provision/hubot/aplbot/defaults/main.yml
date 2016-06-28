@@ -1,0 +1,16 @@
+---
+nodejs:
+  npm:
+    packages:
+       - coffee-script
+       - yo
+       - hubot
+       - generator-hubot
+       - hubot-slack
+
+workdir: /home/ubuntu/hubot
+
+essentials:
+  timezone: "America/Bogota"
+  packages:
+    - ansible

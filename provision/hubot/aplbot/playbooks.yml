@@ -1,0 +1,15 @@
+---
+- name: Install Essentials
+  hosts: local
+  roles:
+    - { role: aplyca.Essentials, tags: ["aplyca.Essentials"] }
+
+- name: Install Hubot Dependencies
+  hosts: local
+  roles:
+    - { role: aplyca.NodeJS, tags: ["aplyca.NodeJS"] }
+
+- name: Install Hubot
+  hosts: local
+  roles:
+    - { role: aplbot, tags: ["aplbot"] }
