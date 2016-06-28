@@ -3,3 +3,4 @@ essentials:
   timezone: "America/Bogota"
   packages:
     - ansible
+    - redis-server
